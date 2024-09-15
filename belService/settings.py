@@ -211,7 +211,7 @@ MEDIA_ROOT = MEDIA_DIR
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "https://app.bestelectronics.com.bd",
-    "http:s//service.bestelectronics.com.bd"
+    "https://service.bestelectronics.com.bd"
 ]
 
 CORS_ALLOWED_ORIGINS = [

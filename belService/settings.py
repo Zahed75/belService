@@ -23,9 +23,9 @@ SECRET_KEY = 'django-insecure-%vooej_vyg7)=i#sl@s7**#v+jqfr)p+o8@2wfjn&sent9hzvr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-PRODUCTION = False
+PRODUCTION = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','service.bestelectronics.com.bd.']
 
 
 # Application definition
@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'provider'
+    'provider',
+    'rest_framework',
+    'drf_spectacular',
+
 
 ]
 
@@ -136,6 +139,20 @@ REST_FRAMEWORK = {
 
 
 
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Best Electronics Ltd Custom third party service provider-By Zahed',
+    'DESCRIPTION': 'Its a multitenant Application User can create'
+                   ' Multiple Outlets-Monthly Reporting Based on outlet-'
+                   'Application run On Python(Django Rest API),PostGreSQLDB,Caching Redis',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+}
+
+
+
+
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=2),
@@ -193,12 +210,15 @@ MEDIA_ROOT = MEDIA_DIR
 # CSRF and CORS settings
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
-    "https://app.bestelectronics.com.bd"
+    "https://app.bestelectronics.com.bd",
+    "http:s//service.bestelectronics.com.bd"
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://app.bestelectronics.com.bd"
+    "https://app.bestelectronics.com.bd",
+    "http:s//service.bestelectronics.com.bd"
+
 ]
 
 # In case you're using HTTPS in production
@@ -213,6 +233,11 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'tech.syscomatic@gmail.com'
 EMAIL_HOST_PASSWORD = 'nfkb rcqg wdez ionc'
+
+
+# In settings.py
+# APPEND_SLASH = False
+
 
 
 # Default primary key field type

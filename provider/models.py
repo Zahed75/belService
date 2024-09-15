@@ -9,3 +9,15 @@ class HomeFeature(models.Model):
 
     def __str__(self):
         return self.featureName
+
+
+
+
+class Product(models.Model):
+    productId = models.CharField(max_length=255, unique=True)
+    featureImage = models.ImageField(upload_to='feature_images/')
+    productImages = models.ImageField(upload_to='product_images/', blank=True, null=True)
+
+    def __str__(self):
+        return self.productId
+

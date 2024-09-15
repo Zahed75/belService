@@ -2,11 +2,21 @@ from django.contrib import admin
 from.models import *
 
 
-#
-# @admin.register(Discount)
-#
-# class DiscountAdmin(admin.ModelAdmin):
-#     list_display = ('id','coupon_amount','coupon_expiry','minimum_spend','maximum_spend','usage_limit_per_user')
-#
 
-# Register your models here.
+@admin.register(HomeFeature)
+
+class HomeFeatureAdmin(admin.ModelAdmin):
+    list_display = ('id','featureName','coverImage')
+
+
+
+
+
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('productId', 'featureImage', 'productImages')
+    search_fields = ('productId',)
+    list_filter = ('productId',)
+    ordering = ('productId',)
+
+admin.site.register(Product, ProductAdmin)

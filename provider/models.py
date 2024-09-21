@@ -17,6 +17,5 @@ class Product(models.Model):
     featureImage = models.ImageField(upload_to='feature_images/',blank=True,null=True)
     productImages = models.ImageField(upload_to='product_images/', blank=True, null=True)
 
-    def __str__(self):
-        return self.productImages
+
 

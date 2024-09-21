@@ -14,9 +14,7 @@ class HomeFeatureAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('productId', 'featureImage', 'productImages')
-    search_fields = ('productId',)
-    list_filter = ('productId',)
-    ordering = ('productId',)
+    list_display = ('featureImage', 'productImages')
+
 
 admin.site.register(Product, ProductAdmin)

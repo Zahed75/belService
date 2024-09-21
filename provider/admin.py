@@ -14,7 +14,7 @@ class HomeFeatureAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('featureImage', 'productImages')
+    list_display = ('featureImage', 'productImage')
 
 
 admin.site.register(Product, ProductAdmin)

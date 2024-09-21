@@ -56,7 +56,7 @@ def get_all_feature(request):
 
 
 @api_view(['POST'])
-@parser_classes([MultiPartParser, FormParser])
+@parser_classes([MultiPartParser])
 def add_product_picture(request):
     try:
         payload = request.data
@@ -80,6 +80,8 @@ def add_product_picture(request):
             'code': status.HTTP_400_BAD_REQUEST,
             'message': str(e)
         })
+
+
 
 
 

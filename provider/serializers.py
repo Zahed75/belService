@@ -17,4 +17,4 @@ class HomeFeatureSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ['featureImage', 'productImages']
+        fields = '__all__'

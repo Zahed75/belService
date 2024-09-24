@@ -1,7 +1,7 @@
 from .modules import *
 
-# Create your views here.
 
+# Create your views here.
 
 
 @api_view(['POST'])
@@ -30,9 +30,23 @@ def upload_multiple_images(request):
         created_images.append(product_image)
 
     # Serialize the created images and return them in the response
-    serializer = ProductImageSerializer(created_images, many=True)
+    serializer = ProductImageSerializer(created_images, many=True, context={'request': request})
     return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
+@api_view(['GET'])
+def get_all_images(request):
+    try:
+        images = ProductImage.objects.all()
+        serializer = ProductImageSerializer(images, many=True)
+        return Response({
+            'code': status.HTTP_200_OK,
+            'message': 'Get All Images Fetched Successfully',
+            'data': serializer.data
+        })
 
-
+    except Exception as e:
+        return Response({
+            'code': status.HTTP_400_BAD_REQUEST,
+            'message': str(e)
+        })

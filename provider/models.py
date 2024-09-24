@@ -8,9 +8,8 @@ class ProductImage(models.Model):
     ImageName = models.CharField(max_length=50,blank=True,null=True)
     ImageDescription = models.CharField(max_length=50,blank=True,null=True)
 
-
     def __str__(self):
-        return self.ImageName
+        return self.ImageName if self.ImageName else "Unnamed Image"
 
 
 

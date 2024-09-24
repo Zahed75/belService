@@ -1,0 +1,12 @@
+
+Django
+django-cleanup
+django-cors-headers
+django-filter
+djangorestframework
+djangorestframework-simplejwt
+drf-spectacular
+Markdown
+pillow
+PyJWT
+mysqlclient

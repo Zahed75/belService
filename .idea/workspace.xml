@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4be6879-effe-4e88-9992-dfe71ef2fe49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/belService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/belService.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/req.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/belService/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/belService/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/provider/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/provider/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/provider/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +124,7 @@
       <workItem from="1726914208334" duration="1370000" />
       <workItem from="1726931439762" duration="31000" />
       <workItem from="1727164968600" duration="2972000" />
-      <workItem from="1727170638365" duration="1780000" />
+      <workItem from="1727170638365" duration="2999000" />
     </task>
     <servers />
   </component>

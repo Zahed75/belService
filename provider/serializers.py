@@ -3,18 +3,7 @@ from .models import *
 
 
 
-class HomeFeatureSerializer(serializers.ModelSerializer):
+class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
-        model= HomeFeature
-        fields='__all__'
-
-
-
-
-
-
-
-class ProductSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Product
-        fields = '__all__'
+        model = ProductImage
+        fields = ['ImageUrl', 'ImageName', 'ImageDescription']

@@ -202,7 +202,9 @@ CSRF_TRUSTED_ORIGINS = [
     "https://localhost:3004",
     "http://localhost:3004",
     "https://app.bestelectronics.com.bd",
-    "https://service.bestelectronics.com.bd"
+    "https://service.bestelectronics.com.bd",
+    "https://dashboard.bestelectronics.com.bd",
+
 
 ]
 
@@ -211,7 +213,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://localhost:3004",
     "http://localhost:3000",
     "https://app.bestelectronics.com.bd",
-    "https://service.bestelectronics.com.bd"
+    "https://service.bestelectronics.com.bd",
+    "https://dashboard.bestelectronics.com.bd",
 
 
 ]

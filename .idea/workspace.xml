@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4be6879-effe-4e88-9992-dfe71ef2fe49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/req.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/provider/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/belService/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/belService/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,16 +26,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Zahed75"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Zahed75&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "git@github.com:Zahed75/belService.git",
-    "accountId": "9f1c5c12-49a9-4b0e-9b96-089f9b236e19"
+    "accountId": "5610eb6f-1d6f-4e4c-8bb9-99f57236b8c8"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -54,7 +53,7 @@
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/DjangoProjects/belService",
+    "last_opened_file_path": "/Users/zahed/Downloads/BestElectronics/belService",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -125,6 +124,7 @@
       <workItem from="1726931439762" duration="31000" />
       <workItem from="1727164968600" duration="2972000" />
       <workItem from="1727170638365" duration="2999000" />
+      <workItem from="1727445972497" duration="93000" />
     </task>
     <servers />
   </component>

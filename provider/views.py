@@ -55,4 +55,14 @@ def get_all_images(request):
 
 
 
+# Render HTML template
+def index(request):
+    dict ={
+
+    }
+    return render(request, 'provider/invoice.html', dict)  # Rendering the invoice.html template
+
+
+
+
 

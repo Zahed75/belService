@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+<head>
+    <title>BEL-Invoice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <!-- External CSS libraries -->
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/fonts/font-awesome/css/font-awesome.min.css' %}">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon" >
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+{% block body_block %}
+
+{% endblock %}
+
+<body>
+
+
+
+
+
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/jspdf.min.js' %}"></script>
+<script src="{% static 'assets/js/html2canvas.js' %}"></script>
+<script src="{% static 'assets/js/app.js' %}"></script>
+</body>
+</html>

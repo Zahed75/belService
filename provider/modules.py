@@ -41,4 +41,9 @@ import random
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
+from django.shortcuts import render
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
+from weasyprint import HTML
+from io import BytesIO
+import requests

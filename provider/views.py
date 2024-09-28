@@ -63,6 +63,68 @@ def index(request):
     return render(request, 'provider/invoice.html', dict)  # Rendering the invoice.html template
 
 
+import requests
+from django.shortcuts import render
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
+from weasyprint import HTML
+from io import BytesIO
+
+# URL for your Node.js Order creation API
+NODEJS_ORDER_API = "https://app.bestelectronics.com.bd/api/v1/order/orderCreate"
+
+
+def create_order_and_send_invoice(request):
+    if request.method == "POST":
+        # Extract the order details from the request (from Django form or passed directly)
+        order_data = {
+            "customer": request.POST.get("customer"),
+            "email": request.POST.get("email"),
+            "orderType": request.POST.get("orderType"),
+            "deliveryAddress": request.POST.get("deliveryAddress"),
+            "userName": request.POST.get("userName"),
+            "district": request.POST.get("district"),
+            "phoneNumber": request.POST.get("phoneNumber"),
+            "orderNote": request.POST.get("orderNote"),
+            "firstName": request.POST.get("firstName"),
+            "lastName": request.POST.get("lastName"),
+            "channel": request.POST.get("channel"),
+            "outlet": request.POST.get("outlet"),
+            "customerIp": request.POST.get("customerIp"),
+            "paymentMethod": request.POST.get("paymentMethod"),
+            "products": request.POST.get("products"),
+            "couponName": request.POST.get("couponName"),
+        }
+
+        # Make the API call to create the order
+        response = requests.post(NODEJS_ORDER_API, json=order_data)
+
+        if response.status_code == 200:
+            order = response.json()["order"]["createdOrder"]["order"]
+
+            # Render the invoice template with dynamic order data
+            html_content = render_to_string("provider/invoice.html", {"order": order})
+
+            # Generate PDF from HTML content using WeasyPrint
+            pdf_file = BytesIO()
+            HTML(string=html_content).write_pdf(pdf_file)
+            pdf_file.seek(0)
+
+            # Send the invoice PDF via email
+            email_subject = f"Invoice for your order {order['orderId']}"
+            email_body = "Please find the attached invoice for your recent order."
+            email = EmailMessage(
+                email_subject,
+                email_body,
+                "no-reply@bestelectronics.com.bd",  # From email
+                [order["email"]],  # To email (customer email)
+            )
+            email.attach(f"Invoice-{order['orderId']}.pdf", pdf_file.read(), "application/pdf")
+            email.send()
+
+            return render(request, "provider/order_success.html", {"order": order})
+        else:
+            return render(request, "provider/order_failure.html", {"error": response.json()})
 
 
 
